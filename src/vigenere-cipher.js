@@ -20,13 +20,25 @@ const { NotImplementedError } = require('../extensions/index.js');
  * 
  */
 class VigenereCipheringMachine {
-  encrypt() {
-    throw new NotImplementedError('Not implemented');
-    // remove line with error and write your code here
+
+  alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  type = true;
+
+  constructor(type = true) {
+    this.type = type;
   }
-  decrypt() {
-    throw new NotImplementedError('Not implemented');
-    // remove line with error and write your code here
+
+  encrypt(str, key) {
+    if (!str || !key) {
+      throw new Error("Incorrect arguments!")
+    }
+    return str;
+  }
+  decrypt(str, key) {
+    if (!str || !key) {
+      throw new Error("Incorrect arguments!")
+    }
+    return str;
   }
 }
 
